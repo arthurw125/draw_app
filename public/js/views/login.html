@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1>Login</h1>
+  <p>Enter a nickname to get started.
+	<div class="input-group input-group-lg">
+		<input type="text" class="form-control" placeholder="Nickname" ng-model="nickname">
+		<span class="input-group-btn">
+			<button class="btn btn-primary" type="button" ng-click="login()">button</button>
+		</span>
+	</div>
+	<div>{{ user.nickname }}</div>
+</div>

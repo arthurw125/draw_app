@@ -1,0 +1,21 @@
+.status {
+    display: none;
+    position: fixed;
+    padding: 1em;
+    top: 1em;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+    z-index: 99999;
+}
+
+.status-info {
+    /* background-color: #E9E9E9;*/
+    color: #000;
+    text-transform: uppercase;
+}

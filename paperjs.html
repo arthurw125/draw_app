@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <!-- stylesheet -->
+    <link href="/css/my-drawing.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- custom stylesheet -->
+    <link href="/css/mycss.css" rel="stylesheet">
+    <link href="/css/status-popup.css" rel="stylesheet">
+    
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    #myCanvas{
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      border: 0;
+      overflow: hidden; /*  Disable scrollbars */
+      display: block;  /* No floating content on sides */
+    }
+  </style>
+  
+  </head>
+  <body>
+    <!-- where the widget goes. you can do CSS to it. -->
+    <!-- note: as of 0.4.13, you cannot use 'literally' as the class name.
+         sorry about that. -->
+<div class="container">
+  <div class="page-header">
+    <h1>Whiteboard App</h1>
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="/#/">Home</a></li>
+      <li role="presentation"><a href="#">Features</a></li>
+      <li role="presentation"><a href="#">Support</a></li>
+      <li role="presentation"><a href="#">About</a></li>
+      <li role="presentation"><a href="#">Contact</a></li>
+    </ul>   
+  </div>
+</div>
+
+<div style="background-color: lightgrey">
+  <div class="container">
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="strokeColor">stroke color</label>
+      <select name="strokeColor" id="strokeColor">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="blue" selected>blue</option>
+        <option value="green">green</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="strokeWidth">stroke width</label>
+      <select name="strokeWidth" id="strokeWidth">
+        <option value="1">tiny</option>
+        <option value="5" selected>small</option>
+        <option value="10">medium</option>
+        <option value="20">large</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="eraser">eraser</label>
+      <input type="checkbox" name="mode" value="on" id="eraser">
+    </div>
+  </form>
+  </div>
+</div>
+  <!-- Alert when user enter room -->
+  <div id="status" class="status status-info alert alert-success" role="alert"></div>
+
+    <!-- Begin Chat Plugin ======================================= -->
+    <!-- End Chat Plugin ========================================= -->
+
+  <canvas id="myCanvas" resize="true"></canvas>
+
+    <!-- kick it off -->
+  
+  <!-- dependency: React.js -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-with-addons.js" ></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript" src="/js/dependencies/paper-full.js"></script>
+
+  <!-- Socket.io -->
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+  <!-- Angular Js -->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js" type="text/javascript" charset="utf-8"></script>
+-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Jquery -->
+  <script
+        src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+        crossorigin="anonymous"></script>
+
+  <!-- dependencies -->
+
+
+  <!-- Modules -->
+  <script src="/js/app.js"></script>
+
+  <!-- Controllers -->
+  <script src="/js/controllers/MainController.js"></script>
+
+  <!-- Services -->
+
+  <!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" src="/js/dependencies/paperjsApp.js" canvas="myCanvas" ></script>
+
+
+
+  <!-- Bootstrapp -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>
+

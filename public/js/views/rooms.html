@@ -1,0 +1,14 @@
+<div class="panel panel-default panel-primary">
+	<div class="panel-heading">Whiteboard Rooms</div>
+	<div class="panel-body">
+		<p><b>Select a room to start writing on the whiteboard!</b></p>
+	</div>
+
+	<!-- List group -->
+  <div class="list-group">
+    <button type="button" class="list-group-item" ng-click="enterRoom($index)" ng-repeat="room in rooms">
+    	<span class="badge">{{ room.size }}</span>{{ room.name }}
+    </button>
+  </div>
+</div>
+<!-- <div>{{ test }}</div> -->
